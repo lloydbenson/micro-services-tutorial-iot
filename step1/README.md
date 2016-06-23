@@ -11,14 +11,14 @@ The `-p` argument exposes ports 8083 and 8086 from the container to the host. Th
 
 Note that when using docker locally, you are always dealing with a separate VM, with it's own IP address (at least on Mac and Windows).
 
-You can stop the container at any time by using the `docker kill` command.
+You can stop the container at any time by using the `docker kill` or `docker stop` commands.
 
 ## Challenge
 ![image](../docs/step1.png)
 
 Now that we have our database running, we are going to create a micro-service to read and write to it. A serialization service has been created for you in step1/services/serializer.
 
-Your challenge is to write a small script to start this process up and use it to write temperature values into influx DB. Once the service is up and running you can use the following command to send data points to the service.
+Your challenge is to write a small script to *start* this process up and use it to write temperature values into influx DB. Once the service is up and running you can use the following command to send data points to the service.
 
 ```sh
 curl -X POST -d '{"role": "serialize", "cmd": "write", "sensorId": "1", "temperature": 32}' http://localhost:10000/act  --header "Content-Type:application/json"

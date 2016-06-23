@@ -17,7 +17,7 @@
     "moment": "2.13.x",
     "mosca": "1.0.x",
     "mqtt": "1.11.x",
-    "seneca": "1.1.x",
+    "seneca": "2.1.x",
     "websocket-stream": "3.2.x"
   },
   "devDependencies": {
