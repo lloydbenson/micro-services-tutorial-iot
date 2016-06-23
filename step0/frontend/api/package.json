@@ -12,7 +12,6 @@
   "dependencies": {
     "end-of-stream": "1.1.x",
     "hapi": "13.4.x",
-    "lodash": "4.13.x",
     "websocket-stream": "3.2.x"
   },
   "devDependencies": {
