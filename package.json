@@ -1,22 +1,26 @@
 {
   "name": "microservices-tutorial-iot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tutorial on creating microservices with docker and seneca",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "belly-button"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "end-of-stream": "1.1.x",
-    "express": "4.13.x",
-    "influx": "4.1.x",
-    "lodash": "4.2.x",
-    "moment": "2.11.x",
+    "hapi": "13.4.x",
+    "inert": "4.0.x",
+    "influx": "4.2.x",
+    "lodash": "4.13.x",
+    "moment": "2.13.x",
     "mosca": "1.0.x",
-    "mqtt": "1.7.x",
+    "mqtt": "1.11.x",
     "seneca": "1.1.x",
-    "websocket-stream": "3.1.x"
+    "websocket-stream": "3.2.x"
+  },
+  "devDependencies": {
+    "belly-button": "2.0.x"
   }
 }
