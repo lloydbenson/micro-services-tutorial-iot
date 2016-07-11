@@ -19,7 +19,7 @@ const createDatabase = function (cb) {
 };
 
 
-const seneca = Seneca();
+const seneca = module.exports.seneca = Seneca();
 createDatabase(() => {
   const db = influx({host: process.env.INFLUX_HOST, username: 'root', password: 'root', database: 'temperature'});
   const ifx = influxUtil(db);
@@ -34,6 +34,3 @@ createDatabase(() => {
 
   seneca.listen({port: process.env.serializer_PORT});
 });
-
-
-module.exports.seneca = seneca;
