@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "belly-button",
+    "start": "node index"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "end-of-stream": "1.1.x",
-    "express": "4.13.x",
-    "lodash": "4.2.x",
-    "websocket-stream": "3.1.x"
+    "hapi": "13.4.x",
+    "websocket-stream": "3.2.x"
+  },
+  "devDependencies": {
+    "belly-button": "2.0.x"
   }
 }
