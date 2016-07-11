@@ -39,7 +39,7 @@ the actuator, serialiser and sensor in a loosely coupled fashion.
 ### Influx
 A database in a container that the serialiser uses for robust storage of data.
 
-Once we have built the application it shoud look a bit like this:
+Once we have built the application it should look a bit like this:
 
 ![image](./docs/screen.png)
 
@@ -106,12 +106,19 @@ Once you have installed node.js fuge may be installed by running:
 npm install -g fuge
 ```
 
+### cURL
+Windows does not come with cURL included in CMD.exe. If you are using Windows please install cURL ensuring you select the version 
+that matches your installed version of Windows. cURL can be found at [https://curl.haxx.se/download.html](). Please use the Windows
+generic version if using CMD.exe.
+
 ### Docker
-Go to https://www.docker.com/products/docker-toolbox and download and install the latest stable verions of docker toolbox for your platform.
+Go to https://www.docker.com/products/docker-toolbox and download and install the latest stable version of docker toolbox for your platform.
 
 Once you have the toolbox installed, start the default machine: `docker-machine start default`
 
-Set your shells environment using: `eval "$(docker-machine env default)"`
+Set your shells environment using: `eval "$(docker-machine env default)"`.
+On Windows for cmd.exe use `@FOR /f "tokens=*" %i IN ('docker-machine.exe env') DO @%i` to set the environment.
+More details [here](https://docs.docker.com/machine/reference/env/).
 
 Confirm that all is well by running: `docker ps`
 
